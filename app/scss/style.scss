@@ -1,0 +1,15 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Nunito Sans';
+}
+
+p, h1, h2, h3, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
