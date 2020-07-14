@@ -3,6 +3,11 @@
         <div class="header__wrapper">
             <nav class="nav__container">
                 <p class="nav__title">AppStarter</p>
+                <div class="nav__btn">
+                    <div class="btn__line"></div>
+                    <div class="btn__line"></div>
+                    <div class="btn__line"></div>
+                </div>
                 <ul class="nav__items">
                     <li class="nav__item"><a href="#">Features</a></li>
                     <li class="nav__item"><a href="#">Video Tour</a></li>
@@ -104,7 +109,7 @@
     }
 
     .inner__intro-title{
-        margin: 33px 0 37px 0;
+        margin: 33px 20px 37px 0;
         font-size: 35px;
         line-height: 50px;
         color: #fff;
@@ -117,7 +122,7 @@
     .inner__intro-download{
         width: 167px;
         height: 50px;
-        margin-right: 20px;
+        margin: 0 20px 20px 0;
         border: none;
         background: linear-gradient(163.33deg, #FF8E64 0%, #FFE641 100%);
         border-radius: 6px;
@@ -135,7 +140,7 @@
     }
 
     .inner__tablet{
-        min-width: 470px;
+        width: 470px;
         height: 700px;
         border-radius: 50px;
         background: #fff;
@@ -145,6 +150,87 @@
         background: url('../images/tablet__background.png') no-repeat center;
         width: 100%;
         height: 100%;
+        margin: 0 auto;
+
+    }
+
+    .nav__btn{
+        display: none;
+    }
+
+    @media (max-width: 1150px){
+
+        .inner__intro{
+            padding: 90px 0;
+            width: 100%;
+        }
+
+        .header__wrapper{
+             padding: 25px 60px 0;
+         }
+
+        .inner__tablet{
+            width: 370px;
+            height: 500px;
+            display: flex;
+            align-items: center ;
+
+        }
+        .tablet__pic{
+            background-size: contain;
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    @media (max-width: 750px){
+        .header{
+            height: 100%;
+        }
+
+        .inner__intro{
+            padding: 0 0 70px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .inner__intro-title{
+            text-align: center;
+        }
+
+        .inner__intro-download{
+            margin: 0 0 10px 0;
+        }
+
+        .header__inner{
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav__items{
+            display: none;
+        }
+        .header__inner-icon{
+            margin: 0 auto;
+        }
+        .nav__btn{
+            display: inline-block;
+        }
+        .btn__line{
+            width: 35px;
+            height: 5px;
+            background-color: #fff;
+            margin: 6px 0;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .inner__intro-title{
+            font-size: 20px;
+        }
+        .inner__tablet{
+            width: 100%;
+        }
     }
 
 </style>

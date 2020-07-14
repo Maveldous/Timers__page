@@ -35,6 +35,10 @@
 </script>
 
 <style scoped>
+    .bottom__container-wrapper{
+        height: 100%;
+    }
+
     .bottom__container-title{
         font-size: 35px;
         text-align: center;
@@ -91,6 +95,22 @@
     }
     .footer__icon img{
         margin-top: 12px;
+    }
+
+    @media (max-width: 700px) {
+        .footer__wrapper{
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .footer__icon{
+            height: 20px;
+            width: 20px;
+        }
+        .footer__wrapper-text2, .footer__bottom-text{
+            font-size: 7px;
+        }
     }
 
 </style>

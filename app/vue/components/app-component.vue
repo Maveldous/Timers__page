@@ -91,8 +91,9 @@
         padding: 60px 0 113px 0;
     }
     .app__container-form{
-        padding: 40px 140px;
         display: flex;
+        justify-content: center;
+        padding: 40px 0;
     }
 
     .app__form-input{
@@ -117,7 +118,11 @@
     }
 
     .app__container-result{
-        padding: 60px 140px 0;
+        padding: 60px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 0;
         list-style: none;
     }
@@ -177,15 +182,22 @@
         border-radius: 6px;
     }
 
+    @media (max-width: 450px)  {
+        .app__container-form{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
 
+        .app__form-btn{
+            margin: 0 0 20px 0;
+        }
 
-    /* .material-icons::before{
-        font-family: "Material Design Icons";
-        position: absolute;
-        content: '\F01C9';
-        width: 100px;
-        height: 100px;
-        
-    } */
+        .app__item-name{
+            text-align: center;
+        }
+        .app__result-item, .app__items-connect{
+            display: block;
+        }
+    }
 
 </style>
