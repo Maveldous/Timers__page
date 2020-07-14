@@ -12,8 +12,10 @@ new Vue ({
 require('./app/app');
 
 },{"./app/app":1}],3:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".app__container[data-v-6efe0586]{\n    max-width: 770px;\n    margin: 0 auto;\n    padding: 60px 0 113px 0;\n}\n.app__container-form[data-v-6efe0586]{\n    padding: 40px 140px;\n    display: flex;\n}\n\n.app__form-input[data-v-6efe0586]{\n    width: 305px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 23px;\n    border: none;\n    padding-left: 20px;\n}\n\n.app__form-btn[data-v-6efe0586]{\n    width: 165px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 24px;\n    color: #FFFFFF;\n    background: linear-gradient(163.14deg, #FF8E64 0%, #FFE641 100%);\n    border-radius: 6px;\n    border: none;\n    margin-left: 20px;\n}\n\n.app__container-result[data-v-6efe0586]{\n    padding: 60px 140px 0;\n    margin: 0;\n    list-style: none;\n}\n\n.app__result-item[data-v-6efe0586]{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding-bottom: 40px;\n}\n\n.app__item-name[data-v-6efe0586]{\n    max-width: 120px;\n    word-wrap: break-word;\n    font-size: 20px;\n    color: #5586F2;\n}\n\n.app__item-time[data-v-6efe0586]{\n    width: 60px;\n    padding: 14px 24px;\n    font-size: 17px;\n    color: #676C75;\n    background: #E7E8EA;\n    border-radius: 6px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586], .app__item-delete[data-v-6efe0586]{\n    height: 50px;\n    width: 50px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586]{\n    background: linear-gradient(135deg, #7956EC 0%, #2FB9F8 100%);\n    border-radius: 25px;\n}\n\n.app__item-pause.green[data-v-6efe0586]{\n    background: linear-gradient(135deg, #009FC5 0%, #3CECB0 100%);\n}\n\n.material-icons[data-v-6efe0586]{\n    color: #fff;\n}\n\n.app__item-delete[data-v-6efe0586]{\n    margin: 0 20px;\n    background: linear-gradient(135deg, #F23673 0%, #FCA069 100%);\n    border-radius: 6px;\n}\n\n\n\n/* .material-icons::before{\n    font-family: \"Material Design Icons\";\n    position: absolute;\n    content: '\\F01C9';\n    width: 100px;\n    height: 100px;\n    \n} */")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".app__container[data-v-6efe0586]{\n    max-width: 770px;\n    margin: 0 auto;\n    padding: 60px 0 113px 0;\n}\n.app__container-form[data-v-6efe0586]{\n    padding: 40px 140px;\n    display: flex;\n}\n\n.app__form-input[data-v-6efe0586]{\n    width: 305px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 23px;\n    border: none;\n    padding-left: 20px;\n}\n\n.app__form-btn[data-v-6efe0586]{\n    width: 165px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 24px;\n    color: #FFFFFF;\n    background: linear-gradient(163.14deg, #FF8E64 0%, #FFE641 100%);\n    border-radius: 6px;\n    border: none;\n    margin-left: 20px;\n}\n\n.app__container-result[data-v-6efe0586]{\n    padding: 60px 140px 0;\n    margin: 0;\n    list-style: none;\n}\n\n.app__items-connect[data-v-6efe0586]{\n    display: flex;\n    justify-content: space-between;\n}\n\n.app__result-item[data-v-6efe0586]{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding-bottom: 40px;\n}\n\n.app__item-name[data-v-6efe0586]{\n    max-width: 120px;\n    word-wrap: break-word;\n    font-size: 20px;\n    color: #5586F2;\n}\n\n.app__item-time[data-v-6efe0586]{\n    width: 80px;\n    padding: 14px 24px;\n    margin-right: 42px;\n    font-size: 17px;\n    color: #676C75;\n    background: #E7E8EA;\n    border-radius: 6px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586], .app__item-delete[data-v-6efe0586]{\n    height: 50px;\n    width: 50px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586]{\n    background: linear-gradient(135deg, #7956EC 0%, #2FB9F8 100%);\n    border-radius: 25px;\n}\n\n.app__item-pause.green[data-v-6efe0586]{\n    background: linear-gradient(135deg, #009FC5 0%, #3CECB0 100%);\n}\n\n.material-icons[data-v-6efe0586]{\n    color: #fff;\n}\n\n.app__item-delete[data-v-6efe0586]{\n    margin: 0 20px;\n    background: linear-gradient(135deg, #F23673 0%, #FCA069 100%);\n    border-radius: 6px;\n}\n\n\n\n/* .material-icons::before{\n    font-family: \"Material Design Icons\";\n    position: absolute;\n    content: '\\F01C9';\n    width: 100px;\n    height: 100px;\n    \n} */")
 ;(function(){
+//
+//
 //
 //
 //
@@ -50,7 +52,7 @@ module.exports = {
             else  nameTemp = this.name
             let obj = {
                 title: nameTemp,
-                timer: 3673,
+                timer: 0,
                 worked: false,
                 interval: ''
             }
@@ -73,6 +75,27 @@ module.exports = {
         del: function(value){
             this.arrTimer.splice(value, 1)
         }
+    },
+    created: function () {
+        window.addEventListener("unload", () => {
+            localStorage.setItem('date', Date.parse(new Date()))
+            localStorage.setItem('data', JSON.stringify(this.arrTimer))
+        })
+        try{
+            if(JSON.parse(localStorage.getItem('data')) != null) this.arrTimer = JSON.parse(localStorage.getItem('data'))
+            let range = (Date.parse(new Date()) - localStorage.getItem('date'))/1000
+            this.arrTimer.forEach( (item, index) => {
+                if(item.worked){
+                    item.timer = item.timer + range
+                    item.worked = false
+                    this.start(item)
+                }
+            });
+        }
+        catch(err){
+            console.log("Первый вход");
+        }
+
     }
 }
 
@@ -80,7 +103,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"app__container"},[_c('form',{staticClass:"app__container-form"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.name),expression:"name"}],staticClass:"app__form-input",attrs:{"placeholder":"Timer Name"},domProps:{"value":(_vm.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.name=$event.target.value}}}),_vm._v(" "),_c('button',{staticClass:"app__form-btn",on:{"click":function($event){$event.preventDefault();return _vm.add($event)}}},[_vm._v("Create Timer")])]),_vm._v(" "),_c('ul',{staticClass:"app__container-result"},_vm._l((_vm.arrTimer),function(item,index){return _c('li',{key:index,staticClass:"app__result-item"},[_c('p',{staticClass:"app__item-name"},[_vm._v(_vm._s(item.title))]),_vm._v(" "),_c('p',{staticClass:"app__item-time"},[_vm._v("\n                "+_vm._s(10 > Math.floor(item.timer / 3600) ? '0' + Math.floor(item.timer / 3600) : Math.floor(item.timer / 3600))+":"+_vm._s(10 > Math.floor((item.timer % 3600) / 60) ? '0' + Math.floor((item.timer % 3600) / 60) : Math.floor((item.timer % 3600) / 60))+":"+_vm._s((10 > Math.floor(item.timer % 3600) % 60) ? '0' + Math.floor(item.timer % 3600) % 60 : Math.floor(item.timer % 3600) % 60)+"\n            ")]),_vm._v(" "),_c('div',{staticClass:"app__result-btns"},[_c('button',{staticClass:"app__item-pause",class:{'green': !item.worked},on:{"click":function($event){$event.preventDefault();return _vm.start(item)}}},[_c('i',{staticClass:"material-icons",domProps:{"innerHTML":_vm._s(item.worked ? 'pause' : 'play_arrow')}})]),_vm._v(" "),_c('button',{staticClass:"app__item-delete",on:{"click":function($event){$event.preventDefault();return _vm.del(index)}}},[_c('i',{staticClass:"material-icons"},[_vm._v("delete")])])])])}),0)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"app__container"},[_c('form',{staticClass:"app__container-form"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.name),expression:"name"}],staticClass:"app__form-input",attrs:{"placeholder":"Timer Name"},domProps:{"value":(_vm.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.name=$event.target.value}}}),_vm._v(" "),_c('button',{staticClass:"app__form-btn",on:{"click":function($event){$event.preventDefault();return _vm.add($event)}}},[_vm._v("Create Timer")])]),_vm._v(" "),_c('ul',{staticClass:"app__container-result"},_vm._l((_vm.arrTimer),function(item,index){return _c('li',{key:index,staticClass:"app__result-item"},[_c('p',{staticClass:"app__item-name"},[_vm._v(_vm._s(item.title))]),_vm._v(" "),_c('div',{staticClass:"app__items-connect"},[_c('p',{staticClass:"app__item-time"},[_vm._v("\n                    "+_vm._s(10 > Math.floor(item.timer / 3600) ? '0' + Math.floor(item.timer / 3600) : Math.floor(item.timer / 3600))+":"+_vm._s(10 > Math.floor((item.timer % 3600) / 60) ? '0' + Math.floor((item.timer % 3600) / 60) : Math.floor((item.timer % 3600) / 60))+":"+_vm._s((10 > Math.floor(item.timer % 3600) % 60) ? '0' + Math.floor(item.timer % 3600) % 60 : Math.floor(item.timer % 3600) % 60)+"\n                ")]),_vm._v(" "),_c('div',{staticClass:"app__result-btns"},[_c('button',{staticClass:"app__item-pause",class:{'green': !item.worked},on:{"click":function($event){$event.preventDefault();return _vm.start(item)}}},[_c('i',{staticClass:"material-icons",domProps:{"innerHTML":_vm._s(item.worked ? 'pause' : 'play_arrow')}})]),_vm._v(" "),_c('button',{staticClass:"app__item-delete",on:{"click":function($event){$event.preventDefault();return _vm.del(index)}}},[_c('i',{staticClass:"material-icons"},[_vm._v("delete")])])])])])}),0)])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-6efe0586"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -91,7 +114,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6efe0586", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6efe0586", __vue__options__)
+    hotAPI.reload("data-v-6efe0586", __vue__options__)
   }
 })()}
 },{"vue":11,"vue-hot-reload-api":9,"vueify/lib/insert-css":13}],4:[function(require,module,exports){
@@ -137,7 +160,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"bottom__container"},[_c('div',{staticClass:"bottom__container-wrapper"},[_vm._m(0),_vm._v(" "),_c('p',{staticClass:"bottom__container-text"},[_vm._v("This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment.")]),_vm._v(" "),_c('app-component'),_vm._v(" "),_vm._m(1)],1)])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{staticClass:"bottom__container-title"},[_c('strong',[_vm._v("Why")]),_vm._v(" do we use it?")])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('footer',{staticClass:"footer"},[_c('div',{staticClass:"footer__wrapper"},[_c('p',{staticClass:"footer__wrapper-text"},[_vm._v("AppStarter")]),_vm._v(" "),_c('div',{staticClass:"footer__wrapper-textblock"},[_c('p',{staticClass:"footer__wrapper-text2"},[_vm._v("Created with ")]),_vm._v(" "),_c('img',{staticClass:"heart__icon",attrs:{"src":"../images/heart__icon.png","alt":"heart__icon"}}),_c('p',{staticClass:"footer__wrapper-text2"},[_vm._v(" by "),_c('strong',[_vm._v(" Sergey Azovskiy")])]),_vm._v(" "),_c('p',{staticClass:"footer__bottom-text"},[_vm._v("© AppStarter, 2017")])]),_vm._v(" "),_c('ul',{staticClass:"footer__icons"},[_c('li',{staticClass:"footer__icon"},[_c('img',{attrs:{"src":"../images/twitter__icon.png","alt":"twitter__icon"}})]),_vm._v(" "),_c('li',{staticClass:"footer__icon"},[_c('img',{attrs:{"src":"../images/facebook__icon.png","alt":"facebook__icon"}})]),_vm._v(" "),_c('li',{staticClass:"footer__icon"},[_c('img',{attrs:{"src":"../images/instagram__icon.png","alt":"instagram__icon"}})])])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{staticClass:"bottom__container-title"},[_c('strong',[_vm._v("Why")]),_vm._v(" do we use it?")])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('footer',{staticClass:"footer"},[_c('div',{staticClass:"footer__wrapper"},[_c('p',{staticClass:"footer__wrapper-text"},[_vm._v("AppStarter")]),_vm._v(" "),_c('div',{staticClass:"footer__wrapper-textblock"},[_c('p',{staticClass:"footer__wrapper-text2"},[_vm._v("Created with ")]),_vm._v(" "),_c('img',{staticClass:"heart__icon",attrs:{"src":"../images/heart__icon.png","alt":"heart__icon"}}),_c('p',{staticClass:"footer__wrapper-text2"},[_vm._v(" by "),_c('strong',[_vm._v(" Sergey Azovskiy")])]),_vm._v(" "),_c('p',{staticClass:"footer__bottom-text"},[_vm._v("© AppStarter, 2017")])]),_vm._v(" "),_c('ul',{staticClass:"footer__icons"},[_c('li',{staticClass:"footer__icon"},[_c('a',{attrs:{"href":"#"}},[_c('img',{attrs:{"src":"../images/twitter__icon.png","alt":"twitter__icon"}})])]),_vm._v(" "),_c('li',{staticClass:"footer__icon"},[_c('a',{attrs:{"href":"#"}},[_c('img',{attrs:{"src":"../images/facebook__icon.png","alt":"facebook__icon"}})])]),_vm._v(" "),_c('li',{staticClass:"footer__icon"},[_c('a',{attrs:{"href":"#"}},[_c('img',{attrs:{"src":"../images/instagram__icon.png","alt":"instagram__icon"}})])])])])])}]
 __vue__options__._scopeId = "data-v-e0cfab8c"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

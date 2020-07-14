@@ -5,14 +5,16 @@
             <button @click.prevent="add" class="app__form-btn">Create Timer</button>
         </form>
         <ul class="app__container-result">
-            <li v-for="(item, index) in arrTimer" :key="index" class="app__result-item" >
+            <li v-for="(item, index) in arrTimer" :key="index" class="app__result-item">
                 <p class="app__item-name">{{item.title}}</p>
-                <p class="app__item-time">
-                    {{ 10 > Math.floor(item.timer / 3600) ? '0' + Math.floor(item.timer / 3600) : Math.floor(item.timer / 3600) }}:{{ 10 > Math.floor((item.timer % 3600) / 60) ? '0' + Math.floor((item.timer % 3600) / 60) : Math.floor((item.timer % 3600) / 60)}}:{{ (10 > Math.floor(item.timer % 3600) % 60) ? '0' + Math.floor(item.timer % 3600) % 60 : Math.floor(item.timer % 3600) % 60 }}
-                </p>
-                <div class="app__result-btns">
-                    <button @click.prevent="start(item)" class="app__item-pause" :class="{'green': !item.worked}"><i class="material-icons" v-html="item.worked ? 'pause' : 'play_arrow'"></i></button>
-                    <button @click.prevent="del(index)" class="app__item-delete"><i class="material-icons">delete</i></button>
+                <div class="app__items-connect">
+                    <p class="app__item-time">
+                        {{ 10 > Math.floor(item.timer / 3600) ? '0' + Math.floor(item.timer / 3600) : Math.floor(item.timer / 3600) }}:{{ 10 > Math.floor((item.timer % 3600) / 60) ? '0' + Math.floor((item.timer % 3600) / 60) : Math.floor((item.timer % 3600) / 60)}}:{{ (10 > Math.floor(item.timer % 3600) % 60) ? '0' + Math.floor(item.timer % 3600) % 60 : Math.floor(item.timer % 3600) % 60 }}
+                    </p>
+                    <div class="app__result-btns">
+                        <button @click.prevent="start(item)" class="app__item-pause" :class="{'green': !item.worked}"><i class="material-icons" v-html="item.worked ? 'pause' : 'play_arrow'"></i></button>
+                        <button @click.prevent="del(index)" class="app__item-delete"><i class="material-icons">delete</i></button>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -34,7 +36,7 @@
                 else  nameTemp = this.name
                 let obj = {
                     title: nameTemp,
-                    timer: 3673,
+                    timer: 0,
                     worked: false,
                     interval: ''
                 }
@@ -57,6 +59,27 @@
             del: function(value){
                 this.arrTimer.splice(value, 1)
             }
+        },
+        created: function () {
+            window.addEventListener("unload", () => {
+                localStorage.setItem('date', Date.parse(new Date()))
+                localStorage.setItem('data', JSON.stringify(this.arrTimer))
+            })
+            try{
+                if(JSON.parse(localStorage.getItem('data')) != null) this.arrTimer = JSON.parse(localStorage.getItem('data'))
+                let range = (Date.parse(new Date()) - localStorage.getItem('date'))/1000
+                this.arrTimer.forEach( (item, index) => {
+                    if(item.worked){
+                        item.timer = item.timer + range
+                        item.worked = false
+                        this.start(item)
+                    }
+                });
+            }
+            catch(err){
+                console.log("Первый вход");
+            }
+
         }
     }
 </script>
@@ -99,6 +122,11 @@
         list-style: none;
     }
     
+    .app__items-connect{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .app__result-item{
         display: flex;
         justify-content: space-between;
@@ -114,8 +142,9 @@
     }
 
     .app__item-time{
-        width: 60px;
+        width: 80px;
         padding: 14px 24px;
+        margin-right: 42px;
         font-size: 17px;
         color: #676C75;
         background: #E7E8EA;
