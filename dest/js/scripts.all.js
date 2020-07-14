@@ -12,7 +12,7 @@ new Vue ({
 require('./app/app');
 
 },{"./app/app":1}],3:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".app__container[data-v-6efe0586]{\n    max-width: 770px;\n    margin: 0 auto;\n    padding: 60px 0 113px 0;\n}\n.app__container-form[data-v-6efe0586]{\n    display: flex;\n    justify-content: center;\n    padding: 40px 0;\n}\n\n.app__form-input[data-v-6efe0586]{\n    width: 305px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 23px;\n    border: none;\n    padding-left: 20px;\n}\n\n.app__form-btn[data-v-6efe0586]{\n    width: 165px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 24px;\n    color: #FFFFFF;\n    background: linear-gradient(163.14deg, #FF8E64 0%, #FFE641 100%);\n    border-radius: 6px;\n    border: none;\n    margin-left: 20px;\n}\n\n.app__container-result[data-v-6efe0586]{\n    padding: 60px 0 0 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    margin: 0;\n    list-style: none;\n}\n\n.app__items-connect[data-v-6efe0586]{\n    display: flex;\n    justify-content: space-between;\n}\n\n.app__result-item[data-v-6efe0586]{\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding-bottom: 40px;\n}\n\n.app__item-name[data-v-6efe0586]{\n    max-width: 120px;\n    word-wrap: break-word;\n    font-size: 20px;\n    color: #5586F2;\n}\n\n.app__item-time[data-v-6efe0586]{\n    width: 80px;\n    padding: 14px 24px;\n    margin-right: 42px;\n    font-size: 17px;\n    color: #676C75;\n    background: #E7E8EA;\n    border-radius: 6px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586], .app__item-delete[data-v-6efe0586]{\n    height: 50px;\n    width: 50px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586]{\n    background: linear-gradient(135deg, #7956EC 0%, #2FB9F8 100%);\n    border-radius: 25px;\n}\n\n.app__item-pause.green[data-v-6efe0586]{\n    background: linear-gradient(135deg, #009FC5 0%, #3CECB0 100%);\n}\n\n.material-icons[data-v-6efe0586]{\n    color: #fff;\n}\n\n.app__item-delete[data-v-6efe0586]{\n    margin: 0 20px;\n    background: linear-gradient(135deg, #F23673 0%, #FCA069 100%);\n    border-radius: 6px;\n}\n\n@media (max-width: 450px)  {\n    .app__container-form[data-v-6efe0586]{\n        flex-direction: column-reverse;\n        align-items: center;\n    }\n\n    .app__form-btn[data-v-6efe0586]{\n        margin: 0 0 20px 0;\n    }\n\n    .app__item-name[data-v-6efe0586]{\n        text-align: center;\n    }\n    .app__result-item[data-v-6efe0586], .app__items-connect[data-v-6efe0586]{\n        display: block;\n    }\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".app__container[data-v-6efe0586]{\n    max-width: 770px;\n    margin: 0 auto;\n    padding: 60px 0 113px 0;\n}\n.app__container-form[data-v-6efe0586]{\n    display: flex;\n    justify-content: center;\n    padding: 40px 0;\n}\n\n.app__form-input[data-v-6efe0586]{\n    width: 305px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 23px;\n    border: none;\n    padding-left: 20px;\n}\n\n.app__form-btn[data-v-6efe0586]{\n    width: 165px;\n    height: 50px;\n    font-size: 17px;\n    line-height: 24px;\n    color: #FFFFFF;\n    background: linear-gradient(163.14deg, #FF8E64 0%, #FFE641 100%);\n    border-radius: 6px;\n    border: none;\n    margin-left: 20px;\n}\n\n.app__container-result[data-v-6efe0586]{\n    padding: 60px 0 0 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    margin: 0;\n    list-style: none;\n}\n\n.app__items-connect[data-v-6efe0586]{\n    display: flex;\n    justify-content: space-between;\n}\n\n.app__result-item[data-v-6efe0586]{\n    min-width: 420px;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding-bottom: 40px;\n}\n\n.app__item-name[data-v-6efe0586]{\n    max-width: 120px;\n    word-wrap: break-word;\n    font-size: 20px;\n    color: #5586F2;\n}\n\n.app__item-time[data-v-6efe0586]{\n    width: 80px;\n    padding: 14px 24px;\n    margin-right: 22px;\n    font-size: 17px;\n    color: #676C75;\n    background: #E7E8EA;\n    border-radius: 6px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586], .app__item-delete[data-v-6efe0586]{\n    height: 50px;\n    width: 50px;\n    border: none;\n}\n\n.app__item-pause[data-v-6efe0586]{\n    background: linear-gradient(135deg, #7956EC 0%, #2FB9F8 100%);\n    border-radius: 25px;\n}\n\n.app__item-pause.green[data-v-6efe0586]{\n    background: linear-gradient(135deg, #009FC5 0%, #3CECB0 100%);\n}\n\n.material-icons[data-v-6efe0586]{\n    color: #fff;\n}\n\n.app__item-delete[data-v-6efe0586]{\n    margin: 0 0 0 20px;\n    background: linear-gradient(135deg, #F23673 0%, #FCA069 100%);\n    border-radius: 6px;\n}\n\n@media (max-width: 450px)  {\n    .app__container-form[data-v-6efe0586]{\n        flex-direction: column-reverse;\n        align-items: center;\n    }\n\n    .app__form-btn[data-v-6efe0586]{\n        margin: 0 0 20px 0;\n    }\n\n    .app__item-name[data-v-6efe0586]{\n        text-align: center;\n    }\n    .app__result-item[data-v-6efe0586], .app__items-connect[data-v-6efe0586]{\n        display: block;\n    }\n    .app__result-item[data-v-6efe0586]{\n        min-width: auto;\n    }\n\n    .app__item-time[data-v-6efe0586]{\n        margin-right: 0;\n    }\n}")
 ;(function(){
 //
 //
@@ -114,7 +114,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6efe0586", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6efe0586", __vue__options__)
+    hotAPI.reload("data-v-6efe0586", __vue__options__)
   }
 })()}
 },{"vue":11,"vue-hot-reload-api":9,"vueify/lib/insert-css":13}],4:[function(require,module,exports){
@@ -170,7 +170,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-e0cfab8c", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-e0cfab8c", __vue__options__)
+    hotAPI.reload("data-v-e0cfab8c", __vue__options__)
   }
 })()}
 },{"./app-component.vue":3,"vue":11,"vue-hot-reload-api":9,"vueify/lib/insert-css":13}],5:[function(require,module,exports){
@@ -233,7 +233,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-cce32184", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-cce32184", __vue__options__)
+    hotAPI.reload("data-v-cce32184", __vue__options__)
   }
 })()}
 },{"vue":11,"vue-hot-reload-api":9,"vueify/lib/insert-css":13}],6:[function(require,module,exports){
@@ -267,7 +267,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-67281ce7", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-67281ce7", __vue__options__)
+    hotAPI.reload("data-v-67281ce7", __vue__options__)
   }
 })()}
 },{"./components/bottom-container.vue":4,"./components/top-container.vue":5,"vue":11,"vue-hot-reload-api":9}],7:[function(require,module,exports){

@@ -133,6 +133,7 @@
     }
 
     .app__result-item{
+        min-width: 420px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -149,7 +150,7 @@
     .app__item-time{
         width: 80px;
         padding: 14px 24px;
-        margin-right: 42px;
+        margin-right: 22px;
         font-size: 17px;
         color: #676C75;
         background: #E7E8EA;
@@ -177,7 +178,7 @@
     }
 
     .app__item-delete{
-        margin: 0 20px;
+        margin: 0 0 0 20px;
         background: linear-gradient(135deg, #F23673 0%, #FCA069 100%);
         border-radius: 6px;
     }
@@ -197,6 +198,13 @@
         }
         .app__result-item, .app__items-connect{
             display: block;
+        }
+        .app__result-item{
+            min-width: auto;
+        }
+
+        .app__item-time{
+            margin-right: 0;
         }
     }
 
