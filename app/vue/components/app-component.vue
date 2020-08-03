@@ -9,7 +9,7 @@
                 <p class="app__item-name">{{item.title}}</p>
                 <div class="app__items-connect">
                     <p class="app__item-time">
-                        {{ 10 > Math.floor(item.timer / 3600) ? '0' + Math.floor(item.timer / 3600) : Math.floor(item.timer / 3600) }}:{{ 10 > Math.floor((item.timer % 3600) / 60) ? '0' + Math.floor((item.timer % 3600) / 60) : Math.floor((item.timer % 3600) / 60)}}:{{ (10 > Math.floor(item.timer % 3600) % 60) ? '0' + Math.floor(item.timer % 3600) % 60 : Math.floor(item.timer % 3600) % 60 }}
+                        {{ item.timer | validateTime('hour') }}:{{ item.timer | validateTime('minute')}}:{{ item.timer | validateTime('second') }}
                     </p>
                     <div class="app__result-btns">
                         <button @click.prevent="start(item)" class="app__item-pause" :class="{'green': !item.worked}"><i class="material-icons" v-html="item.worked ? 'pause' : 'play_arrow'"></i></button>
@@ -27,6 +27,21 @@
             return {
                 arrTimer: [],
                 name: ''
+            }
+        },
+        filters:{
+            validateTime: function(value, timeUnit){
+                switch (timeUnit){
+                    case 'hour':
+                        return 10 > Math.floor(value / 3600) ? '0' + Math.floor(value / 3600) : Math.floor(value / 3600)
+                        break;
+                    case 'minute':
+                        return  10 > Math.floor((value % 3600) / 60) ? '0' + Math.floor((value % 3600) / 60) : Math.floor((value % 3600) / 60);
+                        break;
+                    case 'second':
+                        return (10 > Math.floor(value % 3600) % 60) ? '0' + Math.floor(value % 3600) % 60 : Math.floor(value % 3600) % 60;
+                        break; 
+                }
             }
         },
         methods: {
@@ -204,7 +219,8 @@
         }
 
         .app__item-time{
-            margin-right: 0;
+            margin: 25px 0;
+
         }
     }
 

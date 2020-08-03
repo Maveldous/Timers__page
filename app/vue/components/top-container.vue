@@ -45,7 +45,7 @@
     .header{
         max-width: 100%;
         height: 900px;
-        background: url('../images/header__background.png') no-repeat;
+        background: url('images/header__background.png') no-repeat;
     }
 
     .header__wrapper{
@@ -93,7 +93,7 @@
     .header__inner-icon{
         width: 90px;
         height: 90px;
-        background: url('../images/header__app-icon.png');
+        background: url('images/header__app-icon.png');
         border-radius: 20px;
     }
 
@@ -147,7 +147,7 @@
     }
 
     .tablet__pic{
-        background: url('../images/tablet__background.png') no-repeat center;
+        background: url('images/tablet__background.png') no-repeat center;
         width: 100%;
         height: 100%;
         margin: 0 auto;

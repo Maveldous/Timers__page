@@ -8,13 +8,13 @@
                 <div class="footer__wrapper">
                     <p class="footer__wrapper-text">AppStarter</p>
                     <div class="footer__wrapper-textblock">
-                        <p class="footer__wrapper-text2">Created with </p> <img class="heart__icon" src="../images/heart__icon.png" alt="heart__icon"><p class="footer__wrapper-text2"> by <strong> Sergey Azovskiy</strong></p>
+                        <p class="footer__wrapper-text2">Created with </p> <img class="heart__icon" src="images/heart__icon.png" alt="heart__icon"><p class="footer__wrapper-text2"> by <strong> Sergey Azovskiy</strong></p>
                         <p class="footer__bottom-text">© AppStarter, 2017</p>
                     </div>
                     <ul class="footer__icons">
-                        <li class="footer__icon"><a href="#"><img src="../images/twitter__icon.png" alt="twitter__icon"></a></li>
-                        <li class="footer__icon"><a href="#"><img src="../images/facebook__icon.png" alt="facebook__icon"></a></li>
-                        <li class="footer__icon"><a href="#"><img src="../images/instagram__icon.png" alt="instagram__icon"></a></li>
+                        <li class="footer__icon"><a href="#"><img src="images/twitter__icon.png" alt="twitter__icon"></a></li>
+                        <li class="footer__icon"><a href="#"><img src="images/facebook__icon.png" alt="facebook__icon"></a></li>
+                        <li class="footer__icon"><a href="#"><img src="images/instagram__icon.png" alt="instagram__icon"></a></li>
                     </ul>
                 </div>
             </footer>
